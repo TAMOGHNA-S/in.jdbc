@@ -6,7 +6,8 @@ Step 3: Download JDBC MySQL Connector Jar File compatitible with your device. (h
 
 Usage Instruction:
 
-Step 1: Open Eclipse and create a new project.
-Step 2: Add the MySQL Connector Jar File to that Project as Referenced Library. 
-	(This can be done by right clicking on 'src' under the project name --> Build path --> Configure Build Path --> Libraries --> 	Classpath --> Add External JARs --> Choosing the MySQL-connector JAR file)
-Step 3: Run the code from the Eclipse IDE by creating a new class under that project and use this console based application to simulate the 	laboratory information management system.
+Step 1: Open MySQL Command Prompt and create a database named jdbc_db.
+Step 2: Open Eclipse and create a new project.
+Step 3: Add the MySQL Connector Jar File to the newly created Project as Referenced Library. 
+	(This can be done by right clicking on 'src' under the project name --> Build path --> Configure Build Path --> Libraries --> 		Classpath --> Add External JARs --> Choosing the MySQL-connector JAR file)
+Step 4: Run the code from the Eclipse IDE by creating a new class under that project and use this console based application to simulate 	the laboratory information management system.
