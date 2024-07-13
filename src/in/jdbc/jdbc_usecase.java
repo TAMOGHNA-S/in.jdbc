@@ -10,13 +10,13 @@ public class jdbc_usecase
 			Scanner sc=new Scanner(System.in);
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_db","root", "root");
-			//Statement st=con.createStatement();
-			//String researchers="CREATE TABLE RESEARCHER"+"(researcher_id VARCHAR(20), "+"researcher_name VARCHAR(50),"+"specialization  VARCHAR(50),"+"email VARCHAR(50),"+"phone_number VARCHAR(20),"+"PRIMARY KEY (researcher_id))";
-			//st.executeUpdate(researchers);
-			//String experiment="CREATE TABLE EXPERIMENT"+"(experiment_id VARCHAR(20), "+"experiment_name VARCHAR(50),"+"researcher_id  VARCHAR(20),"+"start_date DATE,"+"end_date DATE,"+"status VARCHAR(20),"+"PRIMARY KEY (experiment_id),"+"FOREIGN KEY (researcher_id) REFERENCES RESEARCHER(researcher_id),"+"CHECK (status='Planned' OR status='In Progress' OR status='Completed'))";
-			//st.executeUpdate(experiment);
-			//String sample="CREATE TABLE SAMPLE"+"(sample_id VARCHAR(20), "+"sample_name VARCHAR(50),"+"experiment_id  VARCHAR(20),"+"collection_date DATE,"+"description VARCHAR(250),"+"PRIMARY KEY (sample_id),"+"FOREIGN KEY (experiment_id) REFERENCES EXPERIMENT(experiment_id))";
-			//st.executeUpdate(sample);
+			Statement st=con.createStatement();
+			String researchers="CREATE TABLE RESEARCHER"+"(researcher_id VARCHAR(20), "+"researcher_name VARCHAR(50),"+"specialization  VARCHAR(50),"+"email VARCHAR(50),"+"phone_number VARCHAR(20),"+"PRIMARY KEY (researcher_id))";
+			st.executeUpdate(researchers);
+			String experiment="CREATE TABLE EXPERIMENT"+"(experiment_id VARCHAR(20), "+"experiment_name VARCHAR(50),"+"researcher_id  VARCHAR(20),"+"start_date DATE,"+"end_date DATE,"+"status VARCHAR(20),"+"PRIMARY KEY (experiment_id),"+"FOREIGN KEY (researcher_id) REFERENCES RESEARCHER(researcher_id),"+"CHECK (status='Planned' OR status='In Progress' OR status='Completed'))";
+			st.executeUpdate(experiment);
+			String sample="CREATE TABLE SAMPLE"+"(sample_id VARCHAR(20), "+"sample_name VARCHAR(50),"+"experiment_id  VARCHAR(20),"+"collection_date DATE,"+"description VARCHAR(250),"+"PRIMARY KEY (sample_id),"+"FOREIGN KEY (experiment_id) REFERENCES EXPERIMENT(experiment_id))";
+			st.executeUpdate(sample);
 			int n=1;
 			while(n!=0)
 			{
